@@ -1,25 +1,117 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
-  </head>
-  <body>
-    <h1>Contact Me</h1>
-    <p>Email - bhaskartesting123@gmail.com</p>
-    <p>2nd Email - 16p3034@kennedyglobalschool.edu.in</p>
-    <form class="" action="mailto:bhaskartesting123@gmail.com" method="post">
-      <label>Your Name: </label>
-      <input type="text" name="yourName" value=""><br>
-      <label>Your Email: </label>
-      <input type="email" name="yourEmail" value=""><br>
-      <label>Your Message:</label><br>
-      <textarea name="yourMessage" rows="10" cols="30"></textarea><br>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-      <input type="submit" name="">
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            margin: 20px;
+        }
 
-    </form>
+        h1 {
+            text-align: center;
+            color: #333;
+        }
 
-    <a href="index.html">Home Page</a>
-  </body>
+        p {
+            text-align: center;
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <p>Email - <a href="mailto:bhaskartesting123@gmail.com">bhaskartesting123@gmail.com</a></p>
+        <p>2nd Email - <a href="mailto:16p3034@kennedyglobalschool.edu.in">16p3034@kennedyglobalschool.edu.in</a></p>
+        <form action="mailto:bhaskartesting123@gmail.com" method="post">
+            <label for="yourName">Your Name:</label>
+            <input type="text" id="yourName" name="yourName" required>
+
+            <label for="yourEmail">Your Email:</label>
+            <input type="email" id="yourEmail" name="yourEmail" required>
+
+            <label for="yourMessage">Your Message:</label>
+            <textarea id="yourMessage" name="yourMessage" rows="10" required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+        <a class="back-link" href="index.html">Home Page</a>
+    </div>
+</body>
+
 </html>
